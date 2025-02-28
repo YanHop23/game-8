@@ -46,22 +46,7 @@ function swapElements(arr, direction) {
     }
     return newArray
 }
-function moveBlock(direction) {
-    switch (direction) {
-        case 'left':
-            moveLeft()
-            break
-        case 'right':
-            moveRight()
-            break
-        case 'bottom':
-            moveDown()
-            break
-        case 'top':
-            moveUp()
-            break
-    }
-}
+
 function moveUp() {
     let area = areaElement.style.gridTemplateAreas
     let clearArea = extractNumbers(area)
@@ -99,15 +84,25 @@ document.addEventListener('keydown', function (event) {
     switch (event.key) {
         case 'ArrowUp':
             moveUp()
+            console.log('4')
             break
         case 'ArrowDown':
             moveDown()
+            console.log('2')
             break
         case 'ArrowLeft':
             moveLeft()
+            console.log('1')
             break
         case 'ArrowRight':
             moveRight()
+            console.log('3')
+            break
+        case 's':
+            console.log('START')
+            break
+        case 'f':
+            console.log('FINISH')
             break
     }
 })
